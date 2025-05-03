@@ -8,7 +8,6 @@
 ## ICS344: Information Security
 
 # Project Phase #2
----
 
 ## 1. Overview
 
@@ -41,12 +40,13 @@ In this phase, we integrated logs from the victim machine (Metasploitable3) into
 - Logged in with the credentials set up during Splunk server installation:  
   - **Username:** `hussain`  
   - **Password:** `IloveRain123`
-
+  ![Pic1](pics/Picture1.png)
 - Navigated to:  
   **Settings → Forwarding and Receiving → Configure Receiving**
 
 - Clicked on **New Receiving Port**, and set:  
   - **Port:** `9997`
+  ![Pic2](pics/Picture2.png)
 
 ---
 
@@ -57,13 +57,13 @@ In this phase, we integrated logs from the victim machine (Metasploitable3) into
 ```bash
 sudo /opt/splunkforwarder/bin/splunk add forward-server 192.168.0.232:9997
 ```
-
+  ![Pic3](pics/Picture3.png)
 ### Step 2: Add Logs to Monitor
 
 ```bash
 sudo /opt/splunkforwarder/bin/splunk add monitor /var/log/auth.log
 ```
-
+  ![Pic4](pics/Picture4.png)
 ### Step 3: Restart Forwarder
 
 ```bash
@@ -75,6 +75,7 @@ sudo /opt/splunkforwarder/bin/splunk restart
 ```bash
 sudo /opt/splunkforwarder/bin/splunk list forward-server
 ```
+  ![Pic5](pics/Picture5.png)
 
 ---
 
@@ -91,18 +92,19 @@ set USER_FILE usernames.txt && set PASS_FILE passwords.txt
 set VERBOSE true
 run
 ```
-
+![Pic6](pics/Picture6.png)
 ---
 
 ## 6. Log Analysis in Splunk
 
 - Opened **Splunk Search**:  
   `Search & Reporting → Data Summary → Sources → metasploitable`
-
+    ![Pic7](pics/Picture7.png)
 - Located `/var/log/auth.log` and selected it as the source.
+  ![Pic8](pics/Picture8.png)
 
 - Auth logs appeared, showing login attempts.
-
+  ![Pic9](pics/Picture9.png)
 ---
 
 ## 7. Analyze SSH Attack Patterns
@@ -112,8 +114,10 @@ run
     ```
     "Failed password" OR "Accepted password"
     ```
+    ![Pic10](pics/Picture10.png)
 
   This query displays all brute-force login attempts detected by SSH.
+    ![Pic11](pics/Picture11.png)
 
 ### Visualization
 
@@ -121,7 +125,7 @@ run
   - **Timechart → Failed logins over time**
   - **X-axis:** _time  
   - **Y-axis:** count
-
+  ![Pic12](pics/Picture12.png)
 ---
 
 ## 8. Summary & Findings
