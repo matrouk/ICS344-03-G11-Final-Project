@@ -125,6 +125,7 @@ run
   - **Timechart → Failed logins over time**
   - **X-axis:** _time  
   - **Y-axis:** count
+  
   ![Pic12](pics/Picture12.png)
 ---
 
