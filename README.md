@@ -7,10 +7,10 @@
 | Ali Yassein         | 202064940 |
 | Mohammed Alghunaim  | 202016140 |
 
-Group Number: 03
+Group Number: 11
 Work Distribution:
 | Name                | ID        |
 |---------------------|-----------|
-| Hussain Almatrouk   | 40%       |
-| Ali Yassein         | 30%       |
+| Hussain Almatrouk   | 35%       |
+| Ali Yassein         | 35%       |
 | Mohammed Alghunaim  | 30%       |
