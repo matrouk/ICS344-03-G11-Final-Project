@@ -1,5 +1,3 @@
----
-
 # King Fahd University of Petroleum & Minerals  
 **Information and Computer Science Department**
 
